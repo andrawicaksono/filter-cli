@@ -91,6 +91,6 @@ const filter = async () => {
     }
 }
 
-module.exports = filter
+module.exports.filter = filter
 
 filter();
