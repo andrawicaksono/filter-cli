@@ -1,0 +1,35 @@
+{
+  "name": "fliter-cli",
+  "version": "1.0.0",
+  "description": "This is command line application to filter csv data by date",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrawicaksono/fliter-cli.git"
+  },
+  "keywords": [
+    "Filter",
+    "CSV",
+    "Data",
+    "CLI"
+  ],
+  "author": "Andra Wicaksono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrawicaksono/fliter-cli/issues"
+  },
+  "homepage": "https://github.com/andrawicaksono/fliter-cli#readme",
+  "bin": {
+    "filter": "./bin/index.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.2",
+    "fast-csv": "^4.3.6",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "yargs": "^17.7.2"
+  }
+}
