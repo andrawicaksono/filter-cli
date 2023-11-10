@@ -12,10 +12,10 @@ const options = yargs
     .usage(`Usage: $0 -d <directory> -s <start> -e <end>`)
     .options({
         'd': {
-        alias: 'directory',
-        demandOption: true,
-        describe: 'CSV files directory path',
-        type: 'string'
+            alias: 'directory',
+            demandOption: true,
+            describe: 'CSV files directory path',
+            type: 'string'
         },
         's': {
             alias: 'start',
@@ -56,19 +56,19 @@ const readCSVData = async (filePath) => {
     return new Promise((resolve, reject) => {
         let csvData = [];
         fs.createReadStream(filePath)
-        .pipe(parse({ delimiter: ';' }))
-        .on('data', (data) => {
-            let row = data[0].split(',');
-            if (new Date(row[1]) >= new Date(startTime) && new Date(row[1]) < new Date(endTime)) {
-                csvData.push(data[0])
-            }
-        })
-        .on('end', () => {
-            resolve(csvData) 
-        })
-        .on('error', (err) => {
-            return console.log(err_message + err)
-        });
+            .pipe(parse({ delimiter: ';' }))
+            .on('data', (data) => {
+                let row = data[0].split(',');
+                if (new Date(row[1]) >= new Date(startTime) && new Date(row[1]) < new Date(endTime)) {
+                    csvData.push(data[0])
+                }
+            })
+            .on('end', () => {
+                resolve(csvData) 
+            })
+            .on('error', (err) => {
+                return console.log(err_message + err)
+            });
     });
 }
 
