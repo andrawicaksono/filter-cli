@@ -54,7 +54,6 @@ const filterCSVFiles = (filename) => {
 
 const readCSVData = async (filePath) => {
     return new Promise((resolve, reject) => {
-        let csvData = [];
         fs.createReadStream(filePath)
         .pipe(parse({ delimiter: ';' }))
         .on('data', (data) => {
@@ -62,9 +61,6 @@ const readCSVData = async (filePath) => {
             if (new Date(row[1]) >= new Date(startTime) && new Date(row[1]) < new Date(endTime)) {
                 console.log(data[0]);
             }
-        })
-        .on('end', () => {
-            resolve(csvData) 
         })
         .on('error', (err) => {
             return console.log(err_message + err)
