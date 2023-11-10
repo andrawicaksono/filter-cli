@@ -67,7 +67,7 @@ const readCSVData = async (filePath) => {
             resolve(csvData) 
         })
         .on('error', (err) => {
-            reject(err)
+            return console.log(err_message + err)
         });
     });
 }
@@ -82,7 +82,6 @@ const filter = async () => {
 
             await readCSVData(filePath);
         }    
-
     } catch (err) {
         console.log(err_message + err)
     }
