@@ -54,13 +54,17 @@ const filterCSVFiles = (filename) => {
 
 const readCSVData = async (filePath) => {
     return new Promise((resolve, reject) => {
+        let csvData = [];
         fs.createReadStream(filePath)
         .pipe(parse({ delimiter: ';' }))
         .on('data', (data) => {
             let row = data[0].split(',');
             if (new Date(row[1]) >= new Date(startTime) && new Date(row[1]) < new Date(endTime)) {
-                console.log(data[0]);
+                csvData.push(data[0])
             }
+        })
+        .on('end', () => {
+            resolve(csvData) 
         })
         .on('error', (err) => {
             return console.log(err_message + err)
@@ -75,8 +79,12 @@ const filter = async () => {
 
         for (const filename of filenames) {
             let filePath = directoryPath + filename;
+            
+            const data = await readCSVData(filePath);
 
-            await readCSVData(filePath);
+            for (const res of data) {
+                console.log(res);
+            }
         }    
     } catch (err) {
         console.log(err_message + err)
