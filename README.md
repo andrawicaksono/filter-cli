@@ -112,6 +112,7 @@ Use the generator binary/executable file to produce the sample transaction data 
 The CSV data contains four columns and uses a comma-separated delimiter (,)
 
 | Column        | Type                  |
+| ------------- | --------------------- |
 | TrxNo         | Integer               |
 | TrxDate       | Datetime (RFC3339)    |
 | Trx Detail    | String                |
