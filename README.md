@@ -76,10 +76,7 @@ Follow these steps to install Filter CLI:
    npm install . -g
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- USAGE EXAMPLES -->
-
 ## Usage
 
 ```plaintext
