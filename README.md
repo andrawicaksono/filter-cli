@@ -139,7 +139,7 @@ Project Link: [https://github.com/andrawicaksono/filter-cli](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/andrawicaksono/fliter-cli.svg?style=for-the-badge
 [issues-url]: https://github.com/andrawicaksono/fliter-cli/issues
 [license-shield]: https://img.shields.io/github/license/andrawicaksono/fliter-cli.svg?style=for-the-badge
-[license-url]: https://github.com/andrawicaksono/fliter-cli/blob/master/LICENSE.txt
+[license-url]: https://github.com/andrawicaksono/fliter-cli/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/andra-wicaksono-26b1bb192
 [Node.js]: https://img.shields.io/badge/node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=white
